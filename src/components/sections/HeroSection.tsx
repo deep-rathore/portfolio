@@ -53,12 +53,18 @@ export default function HeroSection() {
           </p>
           
           <div ref={addToRefs} className="flex flex-col sm:flex-row gap-4">
-            <MagneticButton className="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 group">
+            <MagneticButton 
+              className="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2 group"
+              onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View Projects 
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </MagneticButton>
             
-            <MagneticButton className="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white font-semibold hover:bg-white/10 transition-colors flex items-center gap-2 neon-border">
+            <MagneticButton 
+              className="px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white font-semibold hover:bg-white/10 transition-colors flex items-center gap-2 neon-border"
+              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Hire Me
             </MagneticButton>
           </div>
